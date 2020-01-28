@@ -21,6 +21,7 @@ in pkgs.stdenv.mkDerivation {
   pname = "haskell-dev-container";
   version = "0.1.0.0";
   src = "./*.nix";
+  setSourceRoot = "sourceRoot=`pwd`";
   description = "A docker container for building Haskell applications.";
   license = "GPL";
   buildDepends = (drv.buildDepends or []) ++ [
